@@ -1,0 +1,13 @@
+/* CSS HEX */
+--xanthous: #ffc759ff;
+--rose-pompadour: #ff7b9cff;
+--glaucous: #607196ff;
+--french-gray: #babfd1ff;
+--antiflash-white: #e8e9edff;
+
+/* CSS HSL */
+--xanthous: hsla(40, 100%, 67%, 1);
+--rose-pompadour: hsla(345, 100%, 74%, 1);
+--glaucous: hsla(221, 22%, 48%, 1);
+--french-gray: hsla(227, 20%, 77%, 1);
+--antiflash-white: hsla(228, 12%, 92%, 1);

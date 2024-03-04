@@ -1,0 +1,26 @@
+@media screen and (max-width: 1086px) and (min-width: 768px) {
+    
+        body .biography-facts {
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 30px;
+            padding: 30px;
+        }
+    
+        body .vgk,
+        body .kayak,
+        body .unl,
+        body .high-roller {
+            display: flex;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+}

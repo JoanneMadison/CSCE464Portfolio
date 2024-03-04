@@ -1,0 +1,30 @@
+/* This deals with responsive styles for a majority of smartphones. */
+@media screen and (max-width: 768px){
+    .heading{
+        /*font-size: 10px;*/
+        text-align: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+    }
+    body .biography-facts {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+    }
+    body .vgk, body .kayak, body .unl, body .high-roller {
+        display: flex;
+        width: 300px;
+        height: 300px;
+        float: none;
+        margin: 10px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

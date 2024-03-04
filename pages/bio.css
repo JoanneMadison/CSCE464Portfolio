@@ -1,0 +1,81 @@
+/* This deals with responsive styles for desktops above 1920px width. */
+@media screen and (min-width: 1920px){
+    .heading{ 
+        font-size: 30px;
+    }
+    body .biography-facts {
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px;
+        padding: 50px;
+    }
+
+    body .vgk, body .kayak, body .unl, body .high-roller {
+        width: 600px;
+        height: 600px;
+    }
+
+}
+
+/*For the Quiz*/
+@media screen and (max-width: 900px) {
+    body .vgk,
+    body .kayak,
+    body .unl,
+    body .high-roller {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+body .heading {
+    background-color: pink;
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    color: black;
+    
+}
+
+body {
+    background-color: palevioletred;
+    font-family: Gill Sans, sans-serif;
+    color: black;
+}
+
+.biography-facts {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    padding: 50px;
+    background-color: pink;
+    border-radius: 15px;
+}
+
+.unl, .high-roller { 
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    padding: 10px; 
+    border-radius: 15px;
+}
+
+.kayak, .vgk { 
+    float: right;
+    width: 400px;
+    height: 400px;
+    margin: 10px; 
+    padding: 10px;
+    border-radius: 15px;
+}
+

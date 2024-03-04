@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Madison's Biography</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="bio.css">
+    <link rel="stylesheet" type="text/css" href="phone.css">
+    <link rel="stylesheet" type="text/css" href="tablet.css">
+
+</head>
+
+<body>
+    <div class="heading"> 
+        <h1>Hi My Name is Madison! Welcome to My Bio! :)</h1>
+        <h2>Below is a Little Info About Me, Thanks for Visiting!</h2>
+    </div>
+    <!--For the Quiz-->
+    <style>
+        .flex-container { 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: pink;
+            border-radius: 15px;
+        }
+        .flex-item { 
+            padding: 10px;
+            margin: 10px;
+            background-color: lavenderblush;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 500px){
+            body .flex-container{ 
+            flex-direction: column;
+            }
+        }
+    </style>
+    <nav class="flex-container">
+        <div class="flex-item nav-item">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="flex-item nav-item">
+            <a href="project.html">Projects</a>
+        </div>
+        <div class="flex-item nav-item">
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </nav>
+    <div class="biography-facts"> 
+        <div class="fact1">
+            <style> 
+            </style>
+            <img class="unl" src="./images/unl.png" alt="Me in front of the UNL statue" />
+            <p> I am originally from Las Vegas, Nevada born and raised. I decided to go to the University of Nebraska-Lincoln (UNL) for their 
+                computer science program as they could offer me a great education and a new experience. My mom is an alumni of UNL! </p>
+            </p>
+        </div>
+        <div class="fact2">
+            <img class="kayak" src="./images/kayak.jpeg" alt="Me kayaking at Holmes Lake with a friend" />
+            <p> In my free time I enjoy listening to music, exercising, and spending time with friends. Some of my favorite artists include 
+                Lady Gaga, Rosal&#237;a, and Rauw Alejandro. I also enjoy going to the gym and doing yoga. </p>
+        </div>
+        <div class="fact3">
+            <img class="high-roller" src="./images/highroller.jpeg" alt="Jordan and I at the high roller wheel in Las Vegas, NV" />
+            <p>My boyfriend Jordan is also a senior computer science major, however he does not attend UNL. He attends the University of Nevada-Las Vegas
+                (UNLV). We met in high school and have been together for 4 years. </p>
+            </p>
+        </div>
+        <div class="fact4">
+            <img class="vgk" src="./images/vgk.jpeg" alt="Me at a Vegas Golden Knights parade" />
+            <p> I am a big fan of the National Hockey League (NHL) team the Vegas Golden Knights. My favorite player on the team is #81 Jonathan Marchessault. 
+                They were able to win the championship last year, Go Knights Go! </p>
+        </div>
+    </div>
+</body>
+</html>
