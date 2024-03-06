@@ -1,8 +1,137 @@
+.heading h1{
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    color: #000000;
+    margin-left: 100px;
+    margin-top: 10px;
+    opacity: 0.5;
+    
+}
+
+
+body {
+    background-color: #607196ff;
+}
+
+.biography-profile {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    padding: 50px;
+    background-color: #ff7b9cff;
+    border-radius: 15px;
+    border: 5px solid #ffc759ff;
+}
+
+.biography-profile p { 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    color: #000000;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.biography-profile h3 { 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    color: #000000;
+    font-style: bold;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.biography-profile img {
+    width: 500px;
+    height: 450px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 5px solid #ffc759ff;
+}
+
+.biography-facts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    padding: 50px;
+    background-color: #ff7b9cff;
+    border-radius: 15px;
+    border: 5px solid #ffc759ff;
+
+}
+
+.biography-facts h3{ 
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600px;
+    font-style: bold;
+    color: #000000;
+
+}
+.biography-facts .fact1, 
+.biography-facts .fact2, 
+.biography-facts .fact3, 
+.biography-facts .fact4 { 
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.biography-facts p {
+    margin: 10px;
+    padding: 10px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    color: #000000;
+}
+
+.biography-facts .fact1 ul {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 23px;
+    color: #000000;
+    margin-left: 100px;
+    padding-left: 400px;
+}
+
+.travel, .high-roller { 
+    float: left;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    border: 5px solid #ffc759ff;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.sister, .vgk { 
+    float: right;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    border: 5px solid #ffc759ff;
+    margin-right: 40px;
+}
+
 /* This deals with responsive styles for desktops above 1920px width. */
-@media screen and (min-width: 1920px){
-    .heading{ 
+@media screen and (min-width: 1920px) {
+    .heading {
         font-size: 30px;
     }
+
     body .biography-facts {
         font-size: 50px;
         display: flex;
@@ -13,69 +142,12 @@
         padding: 50px;
     }
 
-    body .vgk, body .kayak, body .unl, body .high-roller {
+    body .vgk,
+    body .kayak,
+    body .unl,
+    body .high-roller {
         width: 600px;
         height: 600px;
     }
 
 }
-
-/*For the Quiz*/
-@media screen and (max-width: 900px) {
-    body .vgk,
-    body .kayak,
-    body .unl,
-    body .high-roller {
-        width: 200px;
-        height: 200px;
-    }
-
-}
-
-body .heading {
-    background-color: pink;
-    border-radius: 15px;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    color: black;
-    
-}
-
-body {
-    background-color: palevioletred;
-    font-family: Gill Sans, sans-serif;
-    color: black;
-}
-
-.biography-facts {
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 100px;
-    padding: 50px;
-    background-color: pink;
-    border-radius: 15px;
-}
-
-.unl, .high-roller { 
-    float: left;
-    width: 400px;
-    height: 400px;
-    margin: 10px;
-    padding: 10px; 
-    border-radius: 15px;
-}
-
-.kayak, .vgk { 
-    float: right;
-    width: 400px;
-    height: 400px;
-    margin: 10px; 
-    padding: 10px;
-    border-radius: 15px;
-}
-
