@@ -1,19 +1,64 @@
+<!--NOTES: 
+        - Fix aligning of text forms. They're a little small and not aligned properly.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madison Maloney's Portfolio</title>
+    <title>Contact Page</title>
     <!--Bootstrap Import-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Google Fonts Import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <script src="javascript/formValidation.js"></script>
 </head>
 
-<body>
+<body style="background-color: #607196;">
     <!--#include virtual="../common/navbar.html"-->
-    <h1> Contact TBD!!!</h1>
+    <div class="heading"> 
+        <h1>Contact</h1>    
+    </div>
 
+    <div class="contact-info">
+        <h3>Let's Get in Touch!</h3>
+        <h4>Fill out the form below to send me an email!</h4>
+
+        <form id="contact-form" onsubmit="contactFormProcess()">
+            <!--Email Form here-->
+            <div class="mb-3">
+                <input type="name" class="form-control" id="nameInput" placeholder="Name">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+            </div>
+            <div class="mb-3 align-baseline">
+                <input type="subject" class="form-control" id="subjectInput" placeholder="Subject">
+            </div>
+            <div class="mb-3 align-baseline">
+                <textarea class="form-control" id="messageInput" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div id="sent-alert"> </div>
+            <button type="submit" onsubmit="contactFormProcess()" id="alert-button" class="btn btn-custom">Submit</button>
+        </form>    
+    </div>   
+
+    <div class="rating"> 
+        <h3>Rate My Website</h3>
+        <h4>How was your experience? Give your suggestions below!</h4>
+        <!--Rating Form here-->
+    </div>
+
+<!--#include virtual="../common/footer.html"-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
-
 </html>

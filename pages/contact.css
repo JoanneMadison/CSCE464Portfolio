@@ -1,0 +1,65 @@
+.heading h1{
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    color: #000000;
+    margin-left: 100px;
+    margin-top: 10px;
+    opacity: 0.5;
+
+}
+
+.contact-info, .rating { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    padding: 50px;
+    background-color: #ff7b9cff;
+    border-radius: 15px;
+    border: 5px solid #ffc759ff;
+}
+
+.contact-info input { 
+    text-align: left;
+}
+
+.contact-info .btn-custom {
+    background-color: #babfd1ff;
+    border: 2px solid #babfd1ff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info .btn-custom:hover {
+    background-color: #e8e9edff;
+    border: 2px solid #e8e9edff;
+    color: #000000;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info h3, h4, 
+.rating h3, h4 { 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    color: #000000;
+    font-style: bold;
+    padding-bottom: 20px;
+    text-align: center;
+}
