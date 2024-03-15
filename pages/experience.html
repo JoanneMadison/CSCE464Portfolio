@@ -20,15 +20,120 @@
         <h1>Experience</h1>
     </div>
 
-    <div class="past-experience">
+    <div id="past-experience">
         <h3>Past Experiences</h3>
 
+        <div class="prev-positions">
+            <h4>Previous Positions</h4>
+            <ul>
+                <li>
+                    <h5>Design Studio Associate, Raikes School, <em>2023</em></h5>
+                    <p>I am apart of the Design Studio program in the Raikes School to fufill my capstone requirement. I am apart of
+                        team DMSi where we were tasked with building an AI/ML powered chatbot to aid DMSi customer support personnel.
+                    </p>
+                </li>
+                <li>
+                    <h5>Software Engineer Future, Netsmart, <em>2023</em></h5>
+                    <p>I single handedly built out a net new web app for Netsmart&apos;s developer experience portal for integrations into
+                    Netsmart&apos;s various electronic health records. I had the opportunity to learn about the basics of the healthcare IT
+                    industry and healthcare interoperability including HL7 FHIR.
+                    </p>
+                </li>
+                <li>
+                    <h5>Undergraduate Teaching Assistant, UNL, <em>2022</em></h5>
+                    <p>I am a TA for Software Engineering (CSCE 361) which has around 100 students enrolled. I assisted in answering student
+                    questions on topics covering course material such as software requirements analysis, software architecture design, and agile methodologies.</p>
+                </li>
+            </ul>
+        </div> 
+        
+        <div class="prev-leadership">
+            <h4>Leadership Opportunities</h4>
+            <div class="carousel-container">
+            <div id="carouselCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/init.png" class="d-block w-100" id="init" alt="Me with the other officers of Initialize">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 >President of Initialize, <em>2021</em></h5>
+                            <p>This is a student organization at UNL focused on promoting STEM education to K-12 students. I managed various outreach opportunities for club members to be apart of.</p>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="carousel-item">
+                        <img src="../images/lc.png" class="d-block w-100 lc-resized" alt="The LC Logo" style="max-height: 500px; width: auto; margin: auto;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Learning Community Peer Mentor, <em>2021</em></h5>
+                            <p>Lead a group of 25 freshman college students majoring in computer science to ensure a successful transition
+                            to college. </p>
+                        </div>
+                    </div>-->
+                    <div class="carousel-item">
+                        <img src="../images/nse.png" class="d-block w-100" id="nse" alt="Me during an orientation day">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>New Student Enrollment Orientation Leader, <em>2022</em></h5>
+                            <p>Welcomed and built relationships with over 6,000 incoming freshman students and their families.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            </div>
+        </div>
     </div>
 
     <div class="projects">
         <h3>Projects</h3>
+        <div class="card-container">
+        <div class="card mb-3">
+            <img src="../images/ntst.png" class="card-img-top" alt="Screenshot of CC Docs">
+            <div class="card-body">
+                <h5 class="card-title">CareConnect Docs</h5>
+                <p class="card-text">I built out a net new web app for Netsmart&apos;s developer experience portal for integrations into Netsmart&apos;s various
+                electronic health records. This was my intern project during the summer of 2023.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <img src="../images/dmsi.png" class="card-img-top" alt="Screenshot of CSCB">
+            <div class="card-body">
+                <h5 class="card-title">DMSi Customer Support Chat Bot</h5>
+                <p class="card-text">Helped create an AI-powered chat bot to efficiently improve case to case operations for DMSi customer support personnel. This is my senior
+                    capstone project through Design Studio. </p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <img src="../images/bestbaked.png" class="card-img-top" alt="Screenshot of BB">
+            <div class="card-body">
+                <h5 class="card-title">Best Baked Mobile App</h5>
+                <p class="card-text">This was a mobile app concept designed during the 10 Hour Challenge in November 2023. During the hackathon, our team won 1st place for the idea. 
+                    The app was designed to help users find the best baked goods in their area and promote business to local bakery vendors.</p>
+                </p>
+            </div>
+        </div>
+        </div>
 
     </div>
+    <!--Bootstrap Script Import-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <!--#include virtual="../common/footer.html"-->
 </body>
 </html>
