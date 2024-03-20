@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
     
 </head>
 <body>
@@ -59,21 +60,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost:8888/CSCE464Portfolio/pages/contact.html">Contact</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Experience
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./pages/experience.html/#past-experience">Past Experiences</a></li>
-                            <li><a class="dropdown-item" href="#">Projects</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
                 </ul>
-                
             </div>
         </div>
         <style> 
@@ -88,7 +75,13 @@
                 height: 35px;
                 margin-left: 10px;
                 margin-right: 10px;
+                transition: box-shadow 0.3s ease;
 
+            }
+
+            /* Hover effect for social media icons, Found here: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+            .social-media-icons svg:hover {
+                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             }
 
         </style>

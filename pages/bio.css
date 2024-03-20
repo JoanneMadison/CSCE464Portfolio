@@ -125,29 +125,3 @@ body {
     border: 5px solid #ffc759ff;
     margin-right: 40px;
 }
-
-/* This deals with responsive styles for desktops above 1920px width. */
-@media screen and (min-width: 1920px) {
-    .heading {
-        font-size: 30px;
-    }
-
-    body .biography-facts {
-        font-size: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 100px;
-        padding: 50px;
-    }
-
-    body .vgk,
-    body .kayak,
-    body .unl,
-    body .high-roller {
-        width: 600px;
-        height: 600px;
-    }
-
-}

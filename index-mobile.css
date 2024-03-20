@@ -1,0 +1,72 @@
+/* This deals with responsive styles for a majority of smartphones. */
+@media screen and (max-width: 430px) {
+
+    .home-container {
+        background-color: #ff7b9cff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+        padding: 50px;
+        border-radius: 20px;
+        border: 5px solid #ffc759ff;
+    }
+
+    .home-image img {
+        border-radius: 50%;
+        width: 400px;
+        height: 500px;
+        margin: 10px;
+        padding: 50px;
+    }
+
+    .home-text h1, h3, a {
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .home-text h1 {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: bold;
+        color: #000000;
+    }
+    
+    .home-text h3 {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: #000000;
+    }
+    
+    .home-text .btn-custom {
+        background-color: #babfd1ff;
+        border: 2px solid #babfd1ff;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: bold;
+        color: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-text .btn-custom:hover {
+        background-color: #e8e9edff;
+        border: 2px solid #e8e9edff;
+        color: #000000;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
