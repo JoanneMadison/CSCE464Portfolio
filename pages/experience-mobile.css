@@ -1,0 +1,84 @@
+/* This deals with responsive styles for a majority of smartphones. */
+@media screen and (max-width: 430px){ 
+    .heading h1 {
+            font-size: 50px;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: bold;
+            color: #000000;
+            margin-left: 100px;
+            margin-top: 10px;
+            opacity: 0.5;
+    
+        }
+    
+        #past-experience,
+        .projects {
+            margin: 100px;
+            padding: 50px;
+            background-color: #ff7b9cff;
+            border-radius: 15px;
+            border: 5px solid #ffc759ff;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            color: #000000;
+        }
+    
+        #past-experience h3 {
+            margin: 10px;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+        }
+    
+        .prev-positions h4 {
+            margin: 10px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    
+        .prev-positions li {
+            margin: 10px;
+            padding: 10px;
+            font-size: 15px;
+        }
+    
+        .prev-leadership h4 {
+            font-weight: 600;
+            margin: 10px;
+            padding: 10px;
+            text-align: left;
+            ;
+    
+        }
+    
+        .carousel-item img {
+            width: 300px;
+            height: 500px;
+            border-radius: 15px;
+        }
+    
+        .carousel-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        .card {
+            margin: 60px;
+            padding: 20px;
+            border-radius: 15px;
+    
+        }
+    
+        .projects h3 {
+            margin: 10px;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+        }
+}

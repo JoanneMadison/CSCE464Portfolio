@@ -1,7 +1,6 @@
 /* This deals with responsive styles for a majority of smartphones. */
 @media screen and (max-width: 768px){
     .heading{
-        /*font-size: 10px;*/
         text-align: center;
         justify-content: center;
         margin: 10px;

@@ -1,0 +1,9 @@
+/* This deals with responsive styles for a majority of smartphones. */
+@media screen and (max-width: 480px){
+
+    .heading h1 {
+            font-size: 70px;
+    
+        }
+    
+}
