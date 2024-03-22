@@ -1,38 +1,22 @@
+/*
+    This file is used to validate the contact form on the contact page.
+    It will check if the name, email, subject, and message fields are filled out correctly.
+*/    
+    
+    //This function is called when the submit button is clicked.
     function contactFormProcess() {
         var contactFormObj = document.getElementById("contact-form");
         
-
         if (contactFormValidate(contactFormObj)) {
             //Trigger alert here
-            const alertPlaceholder = document.getElementById('sent-alert');
-            const appendAlert = (message, type) => {
-                const wrapper = document.createElement('div')
-                wrapper.innerHTML = [
-                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                    `   <div>${message}</div>`,
-                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                    '</div>'
-                ].join('')
-
-                alertPlaceholder.append(wrapper)
-            }
-
-            const alertTrigger = document.getElementById('alert-button')
-            if (alertTrigger) {
-            
-                    setTimeout(() => {
-                    alertTrigger.addEventListener('click', () => {
-                        appendAlert('Nice, you triggered this alert message!', 'success');
-                    });
-                }, 5000);
-
-            }    
+            alert("Message sent successfully!");    
 
         } else {
             alert("Please fill out all fields before submitting.");
         }
     }
 
+    //This function is called to validate the form fields. To make sure they are filled out correctly.
     function contactFormValidate(contactFormObj) {
         var name = contactFormObj.nameInput.value;
         var email = contactFormObj.emailInput.value;
@@ -46,6 +30,7 @@
         }
     }
 
+    //This function validates the name field.
     function validateName(name) {
         let regex = new RegExp('^[a-zA-Z\s]+$');
         if (regex.test(name)) {
@@ -56,6 +41,7 @@
         }
     }
 
+    //This function validates the email field.
     function validateEmail(email) {
         let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
         if (regex.test(email)) {
@@ -66,6 +52,7 @@
         }
     }
 
+    //This function validates the subject field.
     function validateSubject(subject) {
         if (subject != "") {
             return true;
@@ -75,6 +62,7 @@
         }
     }
 
+    //This function validates the message field.
     function validateMessage(message) {
         if (message != "") {
             return true;
