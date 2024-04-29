@@ -33,19 +33,19 @@
         <form id="contact-form" onsubmit="contactFormProcess()">
             <!--Email Form here-->
             <div class="mb-3">
-                <input type="name" class="form-control" id="nameInput" placeholder="Name">
+                <input type="name" name="name" class="form-control" id="nameInput" placeholder="Name">
             </div>
             <div class="mb-3">
-                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email">
             </div>
             <div class="mb-3 align-baseline">
-                <input type="subject" class="form-control" id="subjectInput" placeholder="Subject">
+                <input type="subject" name="subject" class="form-control" id="subjectInput" placeholder="Subject">
             </div>
             <div class="mb-3 align-baseline">
-                <textarea class="form-control" id="messageInput" rows="3" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" id="messageInput" rows="3" placeholder="Message"></textarea>
             </div>
             <div id="sent-alert"> </div>
-            <button type="submit" onsubmit="contactFormProcess()" id="alert-button" class="btn btn-custom">Submit</button>
+            <button type="submit" id="alert-button" class="btn btn-custom">Submit</button> 
         </form>    
     </div>   
 

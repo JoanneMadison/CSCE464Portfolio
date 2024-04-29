@@ -3,13 +3,31 @@
     It will check if the name, email, subject, and message fields are filled out correctly.
 */    
     
+    
     //This function is called when the submit button is clicked.
     function contactFormProcess() {
         var contactFormObj = document.getElementById("contact-form");
         
         if (contactFormValidate(contactFormObj)) {
             //Trigger alert here
-            alert("Message sent successfully!");    
+            var formData = new FormData(contactFormObj);
+
+        fetch("email.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.success) {
+                contactFormObj.reset();
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while sending the message. Please try again later.");
+        });
+              
 
         } else {
             alert("Please fill out all fields before submitting.");
