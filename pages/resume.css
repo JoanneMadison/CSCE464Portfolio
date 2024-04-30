@@ -1,0 +1,54 @@
+.heading h1 {
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    color: #000000;
+    margin-left: 100px;
+    margin-top: 10px;
+    opacity: 0.5;
+
+}
+
+#the-canvas {
+    display: block;
+    margin: 50px auto;
+    border: 5px solid #ffc759ff; 
+    border-radius: 20px;
+    direction: ltr; 
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 265px;
+}
+
+#download {
+    background-color: #babfd1ff;
+    border: 2px solid #babfd1ff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    color: #000000;
+}
+
+#download:hover {
+    background-color: #e8e9edff;
+    border: 2px solid #e8e9edff;
+    color: #000000;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+
+}
+
+#download a { 
+    color: black;
+    text-decoration: none;
+}

@@ -1,6 +1,8 @@
 /*
     This file is used to validate the contact form on the contact page.
     It will check if the name, email, subject, and message fields are filled out correctly.
+
+    TODO: Figure out pathing error with php file. 
 */    
     
     
@@ -11,19 +13,25 @@
         if (contactFormValidate(contactFormObj)) {
             //Trigger alert here
             var formData = new FormData(contactFormObj);
-
+        console.log("getting url:", url);
         fetch("email.php", {
             method: "POST",
             body: formData
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log("response:", response);
+            response.json()
+        })
+            
         .then(data => {
+            console.log("data:", data);
             alert(data.message);
             if (data.success) {
                 contactFormObj.reset();
             }
         })
         .catch(error => {
+            console.log("getting url error:", url);
             console.error("Error:", error);
             alert("An error occurred while sending the message. Please try again later.");
         });
