@@ -27,7 +27,7 @@
     text-align: left;
 }
 
-.contact-info .btn-custom {
+.contact-info .btn-custom, .rating .btn-rating {
     background-color: #babfd1ff;
     border: 2px solid #babfd1ff;
     font-family: "Playfair Display", serif;
@@ -40,7 +40,7 @@
     align-items: center;
 }
 
-.contact-info .btn-custom:hover {
+.contact-info .btn-custom:hover, .rating .btn-rating:hover{
     background-color: #e8e9edff;
     border: 2px solid #e8e9edff;
     color: #000000;
@@ -54,7 +54,7 @@
 }
 
 .contact-info h3, h4, 
-.rating h3, h4 { 
+.rating h3, h4, h5 { 
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-size: 50px;
@@ -62,4 +62,24 @@
     font-style: bold;
     padding-bottom: 20px;
     text-align: center;
+    margin: 20px;
+}
+
+.stars {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-star {
+    cursor: pointer;
+    color: #000000;
+    margin-right: 10px;
+}
+
+#chart { 
+    height: 400px; 
+    width: 800px;
+    margin: 30px;
 }

@@ -17,7 +17,15 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="contact.css">
     <link rel="stylesheet" type="text/css" href="contact-mobile.css">
+    <!--Iconify Import-->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/c085a842af.js" crossorigin="anonymous"></script>
+    <!--JavaScript Imports-->
     <script src="javascript/formValidation.js"></script>
+    <!--Chart.js CDN Import-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+        integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body style="background-color: #607196;">
@@ -45,15 +53,45 @@
                 <textarea class="form-control" name="message" id="messageInput" rows="3" placeholder="Message"></textarea>
             </div>
             <div id="sent-alert"> </div>
-            <button type="submit" id="alert-button" class="btn btn-custom">Submit</button> 
+            <button type="submit" id="alert-button" class="btn btn-custom mb-4">Submit Message</button> 
         </form>    
+
+        <h5> I am based in Lincoln, Nebraska. Feel free to reach out to me at any time!</h5>
+        <!--Google Maps Embed API-->
+        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed/v1/streetview?location=40.8194%2C-96.7045&key=AIzaSyCSC9wezlaO8ynDDWdl7YOWw-yRRNylras"></iframe>
     </div>   
 
-    <!-- TODO in the Future: add a rating system w/ a backend -->
     <div class="rating"> 
         <h3>Rate My Website</h3>
         <h4>How was your experience? Give your suggestions below!</h4>
         <!--Rating Form here-->
+
+        <div class="stars">
+            <i class="rating-star far fa-star fa-xl" value="1"></i>
+            <i class="rating-star far fa-star fa-xl" value="2"></i>
+            <i class="rating-star far fa-star fa-xl" value="3"></i>
+            <i class="rating-star far fa-star fa-xl" value="4"></i>
+            <i class="rating-star far fa-star fa-xl" value="5"></i>
+        </div>
+
+        <button type="button" id="ratingButton" class="btn btn-rating m-4">Submit Rating</button>
+        <script src="javascript/starRating.js"></script>
+        
+       
+
+        <h4>Here are some website rating stats:</h4>
+
+        <div id="chart">
+            <canvas id="myChart"></canvas>
+        </div>        
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="javascript/chartCreation.js"></script>
+
+        <h5 id="averageRating"></h5>
+
+
     </div>
 
 <!--#include virtual="../common/footer.html"-->
