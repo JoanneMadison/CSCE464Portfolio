@@ -1,13 +1,11 @@
-// ratings.js
+/*
+    This file is used to create a chart using Chart.js JavaScript Library.
+    It will fetch data from the backend and use it to create a bar graph chart.
+*/ 
 
-const array = [1, 2, 3, 4, 5];
-
+//Fetch the data from the backend and perform actions and calculations to create the chart.
 fetch("data.php")
   .then(response => { 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    console.log("Response:", response);
     return response.json(); 
     
   })
@@ -23,13 +21,12 @@ fetch("data.php")
   })
   .catch(error => {
     console.error('Error fetching ratings:', error);
-    // Handle error
   });
 
 
+  //This function create the actual bar graph using Chart.js
+  //An example can be found here: https://www.chartjs.org/docs/latest/charts/bar.html
   function createChart(ratingData) { 
-    // Use the ratings array to create a chart using Chart.js
-    // Example:
     const ctx = document.getElementById('myChart');
     new Chart(ctx, {
       type: 'bar',
@@ -37,7 +34,7 @@ fetch("data.php")
         labels: ['Rating 1', 'Rating 2', 'Rating 3', 'Rating 4', 'Rating 5'],
         datasets: [{
           label: 'Frequency of Ratings',
-          data: ratingData, // Use the ratings array here
+          data: ratingData,
           backgroundColor: 'rgba(186, 191, 209, 0.5)',
           borderColor: 'rgba(186, 191, 209, 1)',
           borderWidth: 1
@@ -56,13 +53,13 @@ fetch("data.php")
     });
   }
 
+  //This function calculates the frequency of each rating.
   function calculateFrequency(ratingData){ 
     const frequency = [0, 0, 0, 0, 0];
     for(let i = 0; i < ratingData.length; i++){
         for(let j = 1; j <= 5; j++){
             if(ratingData[i] === j){
                 frequency[j-1]++;
-                console.log("Frequency inner:", frequency[j-1]);
             }
         }
     }
@@ -70,6 +67,7 @@ fetch("data.php")
     return frequency;
   }
 
+    //This function calculates the average rating.
   function calculateAverage(ratingData){ 
     let total = 0; 
     for(let i = 0; i < ratingData.length; i++){

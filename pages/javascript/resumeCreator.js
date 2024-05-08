@@ -1,55 +1,36 @@
+/**
+ * This file contains the code to generate the PDF resume using PDF.js, a Javascript library.
+ * The example code found from the PDF.js website was referenced to help create this.
+ * The link can be found here: https://mozilla.github.io/pdf.js/examples/
+ */
 
-        // If absolute URL from the remote server is provided, configure the CORS
-        // header on that server.
-        //
-        const url = '../pdf/Updated-Resume-Fall-2023.pdf';
+    const url = '../pdf/Updated-Resume-Fall-2023.pdf';
 
-        //
-        // The workerSrc property shall be specified.
-        //
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-            './build/pdf.worker.js';
+    pdfjsLib.GlobalWorkerOptions.workerSrc = './build/pdf.worker.js';
 
-        //
-        // Asynchronous download PDF
-        //
-        const loadingTask = pdfjsLib.getDocument(url);
-        const pdf = await loadingTask.promise;
-        //
-        // Fetch the first page
-        //
-        const page = await pdf.getPage(1);
-        const scale = 1.5;
-        const viewport = page.getViewport({ scale });
-        // Support HiDPI-screens.
-        const outputScale = window.devicePixelRatio || 1;
+    const loadingTask = pdfjsLib.getDocument(url);
+    const pdf = await loadingTask.promise;
 
-        //
-        // Prepare canvas using PDF page dimensions
-        //
-        const canvas = document.getElementById("the-canvas");
-        const context = canvas.getContext("2d");
+    const page = await pdf.getPage(1);
+    const scale = 1.5;
+    const viewport = page.getViewport({ scale });
+    const outputScale = window.devicePixelRatio || 1;
 
-        canvas.width = Math.floor(viewport.width * outputScale);
-        canvas.height = Math.floor(viewport.height * outputScale);
-        canvas.style.width = Math.floor(viewport.width) + "px";
-        canvas.style.height = Math.floor(viewport.height) + "px";
+    const canvas = document.getElementById("the-canvas");
+    const context = canvas.getContext("2d");
 
-        const transform = outputScale !== 1
-            ? [outputScale, 0, 0, outputScale, 0, 0]
-            : null;
+    canvas.width = Math.floor(viewport.width * outputScale);
+    canvas.height = Math.floor(viewport.height * outputScale);
+    canvas.style.width = Math.floor(viewport.width) + "px";
+    canvas.style.height = Math.floor(viewport.height) + "px";
 
-        //
-        // Render PDF page into canvas context
-        //
+    const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
 
-
-
-        const renderContext = {
-            canvasContext: context,
-            transform,
-            viewport,
-        };
-        page.render(renderContext);
+    const renderContext = {
+        canvasContext: context,
+        transform,
+        viewport,
+    };
+    page.render(renderContext);
 
     

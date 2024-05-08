@@ -41,13 +41,13 @@
         <form id="contact-form" onsubmit="contactFormProcess()">
             <!--Email Form here-->
             <div class="mb-3">
-                <input type="name" name="name" class="form-control" id="nameInput" placeholder="Name">
+                <input name="name" class="form-control" id="nameInput" placeholder="Name">
             </div>
             <div class="mb-3">
-                <input type="email" name="email" class="form-control" id="emailInput" placeholder="Email">
+                <input name="email" class="form-control" id="emailInput" placeholder="Email">
             </div>
             <div class="mb-3 align-baseline">
-                <input type="subject" name="subject" class="form-control" id="subjectInput" placeholder="Subject">
+                <input name="subject" class="form-control" id="subjectInput" placeholder="Subject">
             </div>
             <div class="mb-3 align-baseline">
                 <textarea class="form-control" name="message" id="messageInput" rows="3" placeholder="Message"></textarea>
@@ -62,11 +62,12 @@
             src="https://www.google.com/maps/embed/v1/streetview?location=40.8194%2C-96.7045&key=AIzaSyCSC9wezlaO8ynDDWdl7YOWw-yRRNylras"></iframe>
     </div>   
 
+    <!--Rating Form here-->
     <div class="rating"> 
         <h3>Rate My Website</h3>
         <h4>How was your experience? Give your suggestions below!</h4>
-        <!--Rating Form here-->
-
+        
+        <!--Create layout for star rating-->
         <div class="stars">
             <i class="rating-star far fa-star fa-xl" value="1"></i>
             <i class="rating-star far fa-star fa-xl" value="2"></i>
@@ -79,7 +80,7 @@
         <script src="javascript/starRating.js"></script>
         
        
-
+        <!--Chart.js Imports and Layout-->
         <h4>Here are some website rating stats:</h4>
 
         <div id="chart">

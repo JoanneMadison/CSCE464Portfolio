@@ -1,41 +1,32 @@
 /*
     This file is used to validate the contact form on the contact page.
     It will check if the name, email, subject, and message fields are filled out correctly.
-
-    TODO: Figure out pathing error with php file. 
 */    
     
     
     //This function is called when the submit button is clicked.
-    function contactFormProcess() {
-        var contactFormObj = document.getElementById("contact-form");
-        
+    function contactFormProcess(event) {
+      var contactFormObj = document.getElementById("contact-form");
+
         if (contactFormValidate(contactFormObj)) {
             //Trigger alert here
+            alert("Message sent successfully!");    
             var formData = new FormData(contactFormObj);
-        console.log("getting url:", url);
+        //Send the contact form info to the backend via POST request.
         fetch("email.php", {
             method: "POST",
             body: formData
         })
-        .then(response => {
-            console.log("response:", response);
-            response.json()
-        })
-            
+        .then(response => response.json())
         .then(data => {
-            console.log("data:", data);
-            alert(data.message);
             if (data.success) {
                 contactFormObj.reset();
             }
         })
         .catch(error => {
-            console.log("getting url error:", url);
             console.error("Error:", error);
             alert("An error occurred while sending the message. Please try again later.");
         });
-              
 
         } else {
             alert("Please fill out all fields before submitting.");

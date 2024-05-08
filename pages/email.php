@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * This file is used to recieve the contact form data from the client. 
+ * Once received it will send an email to the MailHog SMTP client and insert the data into the database.
+ */
+
 //Set up variables needed to connect to database
 $servername = "localhost";
 $username = "root";
@@ -24,7 +29,7 @@ mail($to, $subject, $message, $headers);
 //Connect to database and insert POSTed data to it.
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if (mysqli_connect_errno() || ($conn == null)) {
+if (mysqli_connect_errno()) {
     printf(
         "Database connection failed: %s<br>",
         mysqli_connect_error()

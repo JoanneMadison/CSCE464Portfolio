@@ -1,3 +1,5 @@
+<!--This file creates the resume page for the website-->
+
 <!DOCTYPE html>
 <html>
 
@@ -22,13 +24,13 @@
         <h1>Resume</h1>
     </div>
 
+    <!--Resume Download Button-->
     <div class="button-container">
-
-    <button type="button" class="btn btn-custom btn-lg" id="download"><a href="./pdf/Updated-Resume-Fall-2023.pdf" download="Updated-Resume-Fall-2023.pdf" style="color: black; text-decoration:none;">Download Here</a></button>
+        button type="button" class="btn btn-custom btn-lg" id="download"><a href="../pdf/Updated-Resume-Fall-2023.pdf" download="Updated-Resume-Fall-2023.pdf" style="color: black; text-decoration:none;">Download Here</a></button>
     </div>
 
+    <!--PDF.js Import to build PDF Canvas-->
     <canvas id="the-canvas"></canvas>
-
     <script src="./build/pdf.js" type="module"></script>
     <script src="javascript/resumeCreator.js" type="module"></script>
     

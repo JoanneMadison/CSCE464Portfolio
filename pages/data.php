@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * This file is used to retrieve the ratings from the database and send them back to the client.
+ * This is used to display the ratings on the bar graph chart.
+ */
+
 // Set up variables needed to connect to the database
 $servername = "localhost";
 $username = "root";
@@ -9,7 +14,7 @@ $dbname = "webbook";
 // Connect to the database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if (mysqli_connect_errno() || ($conn == null)) {
+if (mysqli_connect_errno()) {
     printf(
         "Database connection failed: %s<br>",
         mysqli_connect_error()
@@ -24,8 +29,8 @@ $success = mysqli_query($conn, $sql_select);
 
 $data = array();
 
+// If the query was successful, add the ratings to the data array
 if ($success) {
-    //echo "Select query succesful!";
     while ($row = mysqli_fetch_assoc($success)) {
         $data[] = $row['rating'];
     }
@@ -35,4 +40,5 @@ if ($success) {
 
 mysqli_close($conn);
 
+//This sends the data back to the client side
 echo json_encode($data);

@@ -1,23 +1,24 @@
 <?php
 
+/**
+ * This file is used to receive the rating data from the client. 
+ * Once received it will insert the data into the database.
+ */
+
 // Set up variables needed to connect to the database
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "webbook";
-var_dump($_POST);
 
 // Retrieve rating and timeDate from the POST request
 $rating = $_POST['rating'];
 $timeDate = $_POST['timeDate'];
 
-var_dump($_POST);
-echo $rating . ", " . $timeDate;
-
 // Connect to the database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-if (mysqli_connect_errno() || ($conn == null)) {
+if (mysqli_connect_errno()) {
     printf(
         "Database connection failed: %s<br>",
         mysqli_connect_error()
