@@ -49,7 +49,7 @@
 
     //This function validates the name field.
     function validateName(name) {
-        let regex = new RegExp('^[a-zA-Z\s]+$');
+        let regex = new RegExp('^[a-zA-Z\s ]+$');
         if (regex.test(name)) {
             return true;
         } else {
